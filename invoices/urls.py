@@ -7,4 +7,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path(r'v1/invoices', views.InvoicesAPIView.as_view(), name='invoices-list'),
     path(r'v1/invoices/download', views.download_file, name='download'),
+    path(r'v1/invoices/save', views.PaymentsAPIView.as_view(), name='invoices-save'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
